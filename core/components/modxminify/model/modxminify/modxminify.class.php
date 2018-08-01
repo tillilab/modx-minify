@@ -180,7 +180,7 @@ class modxMinify
 
                 $this->log("Writing ".$minifyFilename."\n\r");
                 $collection = new AssetCollection($allFiles, $minifyFilter);
-                $collection->setTargetPath($this->options['cacheUrl'].'/'.$minifyFilename);
+                $collection->setTargetPath($this->options['cachePath'].'/'.$minifyFilename);
                 $am->set($group, $collection);
 
                 if ($updatedFiles > 0 && $skip == 0) {
